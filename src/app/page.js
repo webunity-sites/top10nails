@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const services = [
-  ["Signature Manicure", "Detailed cuticle care, shaping, polish and a nourishing finish.", "from $42"],
-  ["Gel Manicure", "Long-wear colour with a glossy, chip-resistant finish.", "from $55"],
-  ["Spa Pedicure", "A restorative soak, meticulous care, massage and polish.", "from $65"],
+  ["Manicure Regular", "Detailed cuticle care, shaping and a beautiful polish finish.", "$40"],
+  ["Manicure Gel", "Long-wear gel colour with a glossy, chip-resistant finish.", "$50"],
+  ["Pedicure Regular", "Meticulous foot and nail care with a polished finish.", "$50"],
 ];
 
 export default function Home() {
