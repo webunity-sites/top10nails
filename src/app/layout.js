@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
+import { Footer, Header } from "./site-chrome";
 
 const display = Cormorant_Garamond({ subsets: ["latin"], variable: "--font-display", weight: ["400", "500", "600"] });
 const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
@@ -14,5 +15,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="en" className={`${display.variable} ${sans.variable}`}><body>{children}</body></html>;
+  return <html lang="en" className={`${display.variable} ${sans.variable}`}><body><Header />{children}<Footer /></body></html>;
 }

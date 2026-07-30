@@ -1,0 +1,9 @@
+import Link from "next/link";
+
+export const metadata = { title: "Nail Services & Pricing", description: "Explore manicures, gel nails, pedicures and nail art at Top Ten Nails Spa in Vernon, BC." };
+const groups = [
+  ["Manicures", [["Express Polish","Shape and polish refresh","30 min","$30"],["Signature Manicure","Cuticle care, shape, massage and polish","45 min","$42"],["Gel Manicure","Detailed prep and long-wear gel colour","60 min","$55"]]],
+  ["Pedicures", [["Essential Pedicure","Nail and cuticle care with polish","45 min","$48"],["Spa Pedicure","Soak, exfoliation, massage and polish","60 min","$65"],["Gel Spa Pedicure","Our full ritual with long-wear gel","75 min","$78"]]],
+  ["Enhancements & Art", [["Gel Removal","Gentle removal and nail tidy","20 min","$18"],["French Finish","Classic or micro-French detail","add 15 min","$12"],["Custom Nail Art","Personalized art priced by detail","from 15 min","from $10"]]],
+];
+export default function Services(){return <main id="main"><section className="page-hero"><p className="eyebrow">Services &amp; pricing</p><h1>Made for your moment.</h1><p>Thoughtful essentials, lasting colour and artful details—all finished with meticulous care.</p></section><section className="section menu">{groups.map(([group,items])=><div className="menu-group" key={group}><h2>{group}</h2>{items.map(([name,note,time,price])=><article key={name}><div><h3>{name}</h3><p>{note}</p></div><span>{time}</span><strong>{price}</strong></article>)}</div>)}</section><section className="process"><p className="eyebrow">What to expect</p><div>{["A thoughtful consultation","Meticulous preparation","A polished, lasting finish"].map((x,i)=><article key={x}><span>0{i+1}</span><h3>{x}</h3></article>)}</div></section><section className="page-cta"><h2>Find your perfect service.</h2><Link className="button" href="/contact#booking">Book a visit <span>↗</span></Link></section></main>}
