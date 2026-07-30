@@ -20,8 +20,16 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "NailSalon",
     name: "Top Ten Nails Spa",
-    description: "A refined nail salon experience serving Montréal and the South Shore.",
-    areaServed: ["Montréal", "Rive-Sud"],
+    description: "A refined nail salon experience in Vernon, British Columbia.",
+    telephone: "+1-877-330-4318",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "3208 30th Ave",
+      addressLocality: "Vernon",
+      addressRegion: "BC",
+      postalCode: "V1T 2C5",
+      addressCountry: "CA",
+    },
     priceRange: "$$",
   };
 
@@ -29,7 +37,7 @@ export default function Home() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <a className="skip-link" href="#main">Skip to content</a>
-      <div className="announcement">Now welcoming new clients in Montréal &amp; the South Shore <span>✦</span></div>
+      <div className="announcement">Now welcoming new clients in downtown Vernon <span>✦</span></div>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Top Ten Nails Spa, home">
           <span>Top Ten<sup>✦</sup></span>
@@ -47,7 +55,7 @@ export default function Home() {
       <main id="main">
         <section className="hero" id="top">
           <div className="hero-copy">
-            <p className="eyebrow">The essence of beauty</p>
+            <p className="eyebrow">Vernon, British Columbia</p>
             <h1>Beauty, considered down to the last detail.</h1>
             <p className="lede">Elevated nail care in a warm, modern space—thoughtfully designed for you to slow down, feel cared for and leave polished.</p>
             <div className="hero-actions">
@@ -110,8 +118,8 @@ export default function Home() {
           <div className="booking-intro">
             <p className="eyebrow">Your time, beautifully spent</p>
             <h2>Ready for a little you time?</h2>
-            <p>Tell us what you’re looking for and your preferred time. Your email app will open with a ready-to-send appointment request.</p>
-            <div className="mini-note"><span>✦</span> Please allow 1–2 business hours for confirmation.</div>
+            <p>Tell us what you’re looking for and your preferred time. Your messages app will open with a ready-to-send appointment request.</p>
+            <div className="mini-note"><span>✦</span> Prefer to call? <a href="tel:+18773304318">877-330-4318</a></div>
           </div>
           <BookingForm />
         </section>
@@ -125,10 +133,10 @@ export default function Home() {
       </main>
 
       <footer id="contact">
-        <div className="footer-brand"><div className="brand inverse"><span>Top Ten<sup>✦</sup></span><small>— Nails Spa —</small></div><p>L’essence de la beauté.</p></div>
-        <div><h3>Visit</h3><p>Montréal &amp; Rive-Sud<br />Québec, Canada</p><a href="#booking">Request an appointment</a></div>
+        <div className="footer-brand"><div className="brand inverse"><span>Top Ten<sup>✦</sup></span><small>— Nails Spa —</small></div><p>The essence of beauty.</p></div>
+        <div><h3>Visit</h3><p>3208 30th Ave<br />Vernon, BC V1T 2C5</p><a href="https://maps.google.com/?q=3208+30th+Ave+Vernon+BC+V1T+2C5" target="_blank" rel="noreferrer">Get directions ↗</a></div>
         <div><h3>Hours</h3><p>Mon–Fri · 9–7<br />Saturday · 9–5<br />Sunday · Closed</p></div>
-        <div><h3>Follow</h3><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook ↗</a></div>
+        <div><h3>Contact</h3><a href="tel:+18773304318">877-330-4318</a><a href="#booking">Request an appointment</a></div>
         <small className="copyright">© {new Date().getFullYear()} Top Ten Nails Spa. All rights reserved.</small>
       </footer>
       <a className="mobile-book" href="#booking">Book a visit <span>↗</span></a>
