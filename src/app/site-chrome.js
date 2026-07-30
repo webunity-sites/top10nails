@@ -1,21 +1,27 @@
 import Link from "next/link";
+import { Sparkles } from "lucide-react";
+import { MobileNav } from "./mobile-nav";
 
 export function Header() {
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
-      <div className="announcement">Now welcoming new clients in downtown Vernon <span>✦</span></div>
+      <div className="announcement">
+        Now welcoming new clients in downtown Vernon
+        <Sparkles aria-hidden="true" />
+      </div>
       <header className="site-header">
         <Link className="brand logo-link" href="/" aria-label="Top Ten Nails Spa, home">
           <img className="logo-image" src="/logo-top10.svg" alt="Top Ten Nails Spa" />
         </Link>
-        <nav aria-label="Main navigation">
+        <nav className="desktop-navigation" aria-label="Main navigation">
           <Link href="/services">Services</Link>
           <Link href="/gallery">Gallery</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
         </nav>
         <a className="button button-small" href="https://www.bookguru.io/v1/top-ten-nails-spa" target="_blank" rel="noreferrer">Book online</a>
+        <MobileNav />
       </header>
     </>
   );
