@@ -1,9 +1,12 @@
+import Image from "next/image";
+import { BOOKING_URL } from "../site-config";
+
 export const metadata = {
   title: "Nail & Waxing Services in Vernon",
   description: "Browse all 47 manicure, pedicure, nail enhancement, kids and waxing services at Top Ten Nails Spa in Vernon, BC.",
 };
 
-const bookingUrl = "https://www.bookguru.io/v1/top-ten-nails-spa";
+const bookingUrl = BOOKING_URL;
 
 const groups = [
   ["Pedicure & Manicure", [
@@ -90,6 +93,10 @@ export default function Services() {
             ))}
           </div>
         ))}
+      </section>
+      <section className="service-luxury-callout">
+        <div className="service-luxury-image"><Image src="/images/luxury-spa-pedicure-ritual.webp" alt="A serene luxury pedicure ritual with a bubbling foot bath, warm candle and spa treatments" fill sizes="(max-width: 800px) 100vw, 38vw" /></div>
+        <div><p className="eyebrow">Our signature pedicure · $85 · 75 min</p><h2>Luxury Spa Experience</h2><p>Give tired feet a complete reset with six restorative stages: Detox Crystals, Bubbling Activator, Sugar Scrub, Cream Mask, Massage Lotion and a warm Massage Oil Candle finish.</p><a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Book this experience <span>↗</span></a></div>
       </section>
       <section className="process"><p className="eyebrow">What to expect</p><div>{["Choose your service online","Receive instant confirmation","Arrive ready to be cared for"].map((item, index)=><article key={item}><span>0{index+1}</span><h3>{item}</h3></article>)}</div></section>
       <section className="page-cta"><h2>Ready to choose your time?</h2><a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Book online <span>↗</span></a></section>

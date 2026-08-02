@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { CalendarDays, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { BOOKING_URL } from "./site-config";
 
 const navigation = [
   { href: "/services", label: "Services" },
@@ -40,7 +41,7 @@ export function MobileNav() {
         ))}
         <a
           className="mobile-navigation-book"
-          href="https://www.bookguru.io/v1/top-ten-nails-spa"
+          href={BOOKING_URL}
           target="_blank"
           rel="noreferrer"
           onClick={closeMenu}
