@@ -22,15 +22,15 @@ const groups = [
   ["Nails", [
     ["Acrylic Full Set", "60 min", "$65"],
     ["Acrylic Fill", "60 min", "$55"],
-    ["Biogel Full Set", "60 min", "$65"],
-    ["Biogel Fill", "60 min", "$55"],
+    ["Biogel Full Set", "60 min", "$70"],
+    ["Biogel Fill", "60 min", "$60"],
     ["Gel Polish Change Hands", "30 min", "$35"],
     ["Gel Polish Change Feet", "30 min", "$45"],
   ]],
   ["Add-ons", [
     ["French", "15 min", "$10"],
     ["Paraffin Wax", "15 min", "$10"],
-    ["Nail Art Design", "15 min", "$5"],
+    ["Nail Art Design", "15 min", "$10"],
     ["Nail Repair", "15 min", "$10"],
     ["Toe Nail Cut", "15 min", "$20"],
     ["Nail Removal", "30 min", "$30"],
