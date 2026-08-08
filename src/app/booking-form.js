@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 
 export default function BookingForm() {
   const [status, setStatus] = useState("");
@@ -22,7 +23,7 @@ export default function BookingForm() {
       <label>Email or phone<input name="contact" required autoComplete="email" placeholder="How we can reach you" /></label>
       <label>Service<select name="service" defaultValue=""><option value="" disabled>Choose a service</option><option>Signature Manicure</option><option>Gel Manicure</option><option>Spa Pedicure</option><option>Nail Art</option></select></label>
       <div className="form-row"><label>Preferred date<input name="date" type="date" required /></label><label>Time<select name="time" defaultValue="Any time"><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label></div>
-      <button className="button" type="submit">Text appointment request <span>↗</span></button>
+      <button className="button" type="submit">Text appointment request <ArrowUpRight aria-hidden="true" /></button>
       <p className="form-status" aria-live="polite">{status}</p>
     </form>
   );

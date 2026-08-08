@@ -7,6 +7,7 @@ import { BOOKING_URL } from "./site-config";
 
 const navigation = [
   { href: "/services", label: "Services" },
+  { href: "/services/featured", label: "Featured Pedicures" },
   { href: "/gallery", label: "Gallery" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
